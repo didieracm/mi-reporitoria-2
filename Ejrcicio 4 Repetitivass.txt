@@ -13,7 +13,7 @@ def funcionDecimalOctal(decimal):
   while decimal > 0:
     octal = int(decimal % 8)
     decimal = int(decimal / 8)
-    listaOctal.append(octal)
+    listaOctal.append(octal) //hshs
 
   return listaOctal
 
