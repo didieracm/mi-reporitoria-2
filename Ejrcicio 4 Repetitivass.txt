@@ -1,0 +1,63 @@
+# 4
+def funcionDecimalBinario(decimal):
+  listaBinario =[]
+  while decimal > 0:
+    binario = int(decimal % 2)
+    decimal = int(decimal / 2)
+    listaBinario.append(binario)
+
+  return listaBinario
+  
+def funcionDecimalOctal(decimal):
+  listaOctal =[]
+  while decimal > 0:
+    octal = int(decimal % 8)
+    decimal = int(decimal / 8)
+    listaOctal.append(octal)
+
+  return listaOctal
+
+def funcionDecimalHexa(decimal):
+  listaHexa =[]
+  
+  while decimal > 0:
+    hexal = (decimal % 16)
+    print(hexal)
+    if hexal == 10:
+      hexal = "A"
+    elif hexal == 11:
+      hexal = "B"
+    elif hexal == 12:
+      hexal = "C"
+    elif hexal == 13:
+      hexal = "D"
+    elif hexal == 14:
+      hexal = "E"
+    elif hexal == 15:
+      hexal = "F"
+    
+    decimal = int(decimal/16)
+    
+    listaHexa.append(hexal)
+  return listaHexa
+  
+
+def main():
+ 
+  decimal = int(input("Ingrese el numero a convertir: "))
+  print("El numero decimal: ",decimal)
+
+  binario = funcionDecimalBinario(decimal)
+  binario.reverse()
+
+  octal = funcionDecimalOctal(decimal)
+  octal.reverse()
+  
+  hexal = funcionDecimalHexa(decimal)
+  hexal.reverse
+  
+  print("Convertido a Binario es: ", binario)
+  print("Convertido a Octal es: ", octal)
+  print("Convertido a Hexadecimal es: ", hexal)
+
+main()
